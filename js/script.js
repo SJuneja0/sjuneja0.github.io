@@ -1,9 +1,9 @@
 const phrases = [
     "Robotics Engineer",
     "Perception Researcher",
-    "Machine Learning Engineer",
-    "Humanoid Mechatronics Researcher",
-    "Computer Vision Engineer",
+    "ML Engineer",
+    "Humanoid Robots Researcher",
+    "CV Engineer",
 ];
 
 const typed = document.getElementById("typed");
