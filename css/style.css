@@ -11,6 +11,7 @@ body {
 
 .hero {
     min-height: 100vh;
+    padding-top: 120px;
     display: flex;
     align-items: center;
     padding: 80px 7%;
@@ -155,4 +156,139 @@ h1 {
 .socials a:hover {
     background: rgba(255,255,255,0.5);
     transform: translateY(-3px);
+}
+
+
+/* =========================
+   Navigation Bar
+   ========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 20px 6%;
+
+    z-index: 1000;
+
+    /* Slightly transparent background */
+    background: rgba(155, 189, 245, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+.nav-logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+
+    text-decoration: none;
+    color: #111;
+
+    letter-spacing: -1px;
+}
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    position: relative;
+
+    text-decoration: none;
+    color: #111;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #673de6;
+}
+
+/* Little underline animation */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #2867df,
+        #8c2be8
+    );
+
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Resume button */
+
+.nav-resume {
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    color: white;
+    font-weight: 600;
+
+    background: linear-gradient(
+        90deg,
+        #2867df,
+        #8c2be8
+    );
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.nav-resume:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(70, 60, 180, 0.25);
+}
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-resume {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+
+    .navbar {
+        padding: 16px 5%;
+    }
 }
