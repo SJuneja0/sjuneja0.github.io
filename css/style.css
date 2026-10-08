@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: #9bbdf5;
+    color: #080808;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 0.98;
+    margin: 0 0 25px;
+    font-weight: 700;
+}
+
+.gradient-text {
+    display: inline-block;
+
+    background: linear-gradient(
+        90deg,
+        #7437e8,
+        #a52de8,
+        #315fe8,
+        #7437e8
+    );
+
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.typing-text {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: #3977e8;
+    min-height: 1.2em;
+    margin: 0 0 25px;
+}
+
+.cursor {
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+.hero-description {
+    max-width: 680px;
+    font-size: 1.2rem;
+    line-height: 1.45;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.primary {
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #2867df,
+        #8c2be8
+    );
+
+    box-shadow: 0 8px 20px rgba(50, 70, 180, 0.2);
+}
+
+.secondary {
+    background: white;
+    color: #111;
+    border: 1px solid #ddd;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.socials {
+    display: flex;
+    gap: 28px;
+    margin-top: 45px;
+}
+
+.socials a {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.25);
+
+    color: #050505;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.socials a:hover {
+    background: rgba(255,255,255,0.5);
+    transform: translateY(-3px);
+}
